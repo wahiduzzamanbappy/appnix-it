@@ -28,7 +28,13 @@ export function Navbar() {
         )}
       >
         <div className="mx-auto flex w-full max-w-site items-center justify-between px-5 sm:px-8 lg:px-12">
-          <Logo priority className={cn("w-auto transition-all duration-300", scrolled ? "h-8" : "h-9")} />
+          <Logo
+            priority
+            className={cn(
+              "h-auto transition-all duration-300",
+              scrolled ? "w-[160px] sm:w-[190px]" : "w-[170px] sm:w-[200px]",
+            )}
+          />
 
           <nav aria-label="Primary" className="hidden xl:block">
             <ul className="flex items-center gap-1">

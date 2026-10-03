@@ -10,11 +10,12 @@ export const siteConfig = {
   url: (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, ""),
   locale: "en_US",
 
-  /**
-   * Replace /public/brand/appnix-logo.svg with the official logo file and set its
-   * real pixel dimensions here so the proportions are preserved.
-   */
-  logo: { src: "/brand/appnix-logo.svg", width: 176, height: 48, alt: "Appnix IT" },
+  logo: {
+    src: "/brand/Appnix%20IT%20Phoenix%20Tech%20Logo.png",
+    width: 2172,
+    height: 724,
+    alt: "Appnix IT",
+  },
 
   contact: {
     email: "",
