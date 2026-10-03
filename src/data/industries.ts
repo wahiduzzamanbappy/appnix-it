@@ -1,0 +1,38 @@
+import type { Industry } from "@/types";
+
+export const industries: Industry[] = [
+  { slug: "corporate", name: "Corporate", icon: "Building2",
+    description: "Large organisations need systems that connect departments, protect data and scale across teams. We help align technology with how the business is structured.",
+    services: ["software-development", "erp", "business-automation", "cloud"], products: ["pms"],
+    useCases: ["Internal operations platforms", "Cross-department reporting", "Process automation"] },
+  { slug: "sme", name: "SME", icon: "Store",
+    description: "Growing businesses need practical tools that do more with less. We focus on right-sized systems that fit your team and budget and can expand later.",
+    services: ["website-development", "erp", "ecommerce", "digital-marketing"], products: ["pms", "supershop-billing", "ecommerce"],
+    useCases: ["Replacing spreadsheets with one system", "Getting online", "Billing and inventory control"] },
+  { slug: "startups", name: "Startups", icon: "Rocket",
+    description: "Founders need to validate quickly and build a foundation that will not have to be thrown away. We help move from idea to a launchable product.",
+    services: ["software-development", "mobile-app-development", "ui-ux-design", "cloud"], products: [],
+    useCases: ["MVP design and build", "Product architecture", "Launch infrastructure"] },
+  { slug: "government", name: "Government", icon: "Landmark",
+    description: "Public-sector projects demand reliability, accessibility and careful handling of citizen data. We build with transparency, documentation and security in mind.",
+    services: ["software-development", "cybersecurity", "cloud", "it-consultancy"], products: [],
+    useCases: ["Citizen-facing portals", "Records digitisation", "Secure data platforms"] },
+  { slug: "banking-financial-services", name: "Banking & Financial Services", icon: "Briefcase",
+    description: "Financial organisations operate under strict security and compliance expectations. We approach every build with controls, auditability and resilience as requirements.",
+    services: ["cybersecurity", "cloud", "artificial-intelligence", "business-automation"], products: [],
+    useCases: ["Secure customer portals", "Process automation", "Risk and data analytics"] },
+  { slug: "ecommerce", name: "E-commerce", icon: "ShoppingCart",
+    description: "Online sellers compete on speed, trust and convenience. We build storefronts and the integrations behind them so orders, stock and payments stay in sync.",
+    services: ["ecommerce", "website-development", "digital-marketing", "cloud"], products: ["ecommerce"],
+    useCases: ["Storefront build", "Inventory and order sync", "Conversion improvement"] },
+  { slug: "healthcare", name: "Healthcare", icon: "HeartPulse",
+    description: "Healthcare organisations balance patient experience, efficiency and privacy. We build tools that reduce administrative load and handle sensitive data with care.",
+    services: ["software-development", "mobile-app-development", "cybersecurity", "artificial-intelligence"], products: ["care-connect", "pharmacy-module"],
+    useCases: ["Patient communication", "Pharmacy and stock management", "Service coordination"] },
+  { slug: "retail", name: "Retail", icon: "Store",
+    description: "Retailers need fast checkout, accurate stock and a clear view of sales across stores and channels. We connect the counter, the warehouse and the online shop.",
+    services: ["erp", "ecommerce", "software-development", "mobile-app-development"], products: ["supershop-billing", "pharmacy-module", "ecommerce"],
+    useCases: ["Point-of-sale billing", "Multi-branch stock control", "Omnichannel selling"] },
+];
+
+export const getIndustry = (slug: string) => industries.find((i) => i.slug === slug);

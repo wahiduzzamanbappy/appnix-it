@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body { @apply bg-ink font-sans text-base text-white antialiased; overflow-x: hidden; }
+  ::selection { background: #FF7A00; color: #08090B; }
+  :focus-visible { outline: 2px solid #FFB000; outline-offset: 3px; border-radius: 4px; }
+  input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px solid #B35300; outline-offset: 1px; }
+  .text-balance { text-wrap: balance; }
+  img, svg { max-width: 100%; }
+}
+
+/* Respect reduced motion: stop decorative animation and smooth scrolling */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+  .animate-flow, .animate-drift, .animate-pulseDot { animation: none !important; }
+}
