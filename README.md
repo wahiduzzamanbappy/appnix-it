@@ -13,7 +13,7 @@ npm run typecheck && npm run build
 
 ## Before launch (required)
 
-1. **Logo.** The official brand assets live in `public/brand/` as `appnix-it-logo.svg` and `appnix-it-mark.svg`. Keep the file path and real `width` / `height` aligned in `src/config/site.ts`.
+1. **Logo.** The company logo is `public/brand/Appnix IT logo.png`. Keep the file path and real `width` / `height` aligned in `src/config/site.ts`.
 2. **Favicon / touch icon / social image.** `src/app/icon.svg` and `src/app/apple-icon.tsx` use the brand mark. The Open Graph image (`src/lib/og.tsx`) remains text-first and can be updated with the logo when a richer social card is needed.
 3. **Contact details and social URLs** in `src/config/site.ts`. Empty values are hidden everywhere (footer, contact page, schema).
 4. **Statistics** in `src/data/company.ts` are placeholders (`verified: false`). They show only in development. Set real numbers and `verified: true` to publish.
