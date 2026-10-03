@@ -11,9 +11,9 @@ export const siteConfig = {
   locale: "en_US",
 
   logo: {
-    src: "/brand/Appnix%20IT%20Phoenix%20Tech%20Logo.png",
-    width: 2172,
-    height: 724,
+    src: "/brand/appnix-it-logo.svg",
+    width: 920,
+    height: 220,
     alt: "Appnix IT",
   },
 

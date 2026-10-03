@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 220" role="img" aria-label="Appnix IT logo">
+  <defs>
+    <linearGradient id="brandGradient" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#FFB347"/>
+      <stop offset="100%" stop-color="#FF6A00"/>
+    </linearGradient>
+  </defs>
+  <rect width="920" height="220" rx="26" fill="#F4F7FA"/>
+  <g transform="translate(20 20)">
+    <rect width="180" height="180" rx="42" fill="#071C2A"/>
+    <path d="M52 140 90 40l38 100h-20.5L90 93.5 72.5 140H52Z" fill="url(#brandGradient)"/>
+    <path d="M77.7 112h24.6L90 75.5 77.7 112Z" fill="#FFEBD8" opacity="0.9"/>
+  </g>
+  <text x="240" y="110" font-family="Segoe UI, Arial, sans-serif" font-size="72" font-weight="700" fill="#0A1B2A">Appnix</text>
+  <text x="610" y="110" font-family="Segoe UI, Arial, sans-serif" font-size="72" font-weight="700" fill="#FF6A00">IT</text>
+  <text x="242" y="150" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="600" letter-spacing="5" fill="#4D6478">WHERE IDEAS REBORN</text>
+</svg>
