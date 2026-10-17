@@ -6,15 +6,19 @@ import { JsonLd } from "@/components/ui/JsonLd";
 import { PageHero } from "@/components/pages/PageHero";
 import { PairGrid, CheckList, LinkList } from "@/components/pages/Blocks";
 import { CTASection } from "@/components/home/CTASection";
+import { CaseStudyCard } from "@/components/home/CaseStudyCard";
 import { ProductMockup } from "@/components/visuals/ProductMockup";
+import { Button } from "@/components/ui/Button";
 import { industries } from "@/data/industries";
 import { services } from "@/data/services";
+import { caseStudies } from "@/data/case-studies";
 import { productSchema } from "@/lib/schema";
 import type { Product } from "@/types";
 
 export function ProductPage({ product }: { product: Product }) {
   const relIndustries = industries.filter((i) => product.industries.includes(i.slug));
   const relServices = services.filter((s) => product.services.includes(s.slug));
+  const projectStudies = caseStudies.filter((study) => study.productSlug === product.slug && study.slug !== product.slug);
 
   return (
     <>
@@ -38,6 +42,26 @@ export function ProductPage({ product }: { product: Product }) {
           </div>
         </Container>
       </section>
+
+      {projectStudies.length > 0 && (
+        <section className="bg-ink py-20 lg:py-28">
+          <Container>
+            <SectionHeading size="md" eyebrow="Projects" title={`Our ${product.name} Projects`} />
+            <ul className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+              {projectStudies.map((study) => (
+                <li key={study.slug}>
+                  <CaseStudyCard study={study} />
+                  {study.liveUrl && (
+                    <div className="mt-4">
+                      <Button href={study.liveUrl} target="_blank" rel="noopener noreferrer">View Live Project</Button>
+                    </div>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </Container>
+        </section>
+      )}
 
       <PairGrid title="Key capabilities" eyebrow="Capabilities" items={product.capabilities} tone="dark" />
       <CheckList title="Benefits" eyebrow="Why it matters" items={product.benefits} />

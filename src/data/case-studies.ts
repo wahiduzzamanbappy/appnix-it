@@ -29,7 +29,7 @@ export const caseStudies: CaseStudy[] = [
     capabilities: ["Storefront", "Catalogue management", "Payment integration", "Order management"], outcome: pendingOutcome, isPlaceholder: true },
   { slug: "beauty-spell", productSlug: "ecommerce", title: "Beauty Spell", category: "E-commerce",
     challenge: "Beauty and skincare shoppers need an elegant, responsive way to explore products and place orders.",
-    solution: "Beauty Spell is a modern and responsive beauty and skincare e-commerce website developed by Appnix IT, featuring an elegant shopping experience, organized product categories, secure admin management, and streamlined product and order management.",
+    solution: "Beauty Spell is a modern, responsive beauty and skincare e-commerce website developed by Appnix IT, featuring an elegant storefront, product category browsing, secure admin management, and streamlined order management.",
     capabilities: ["Responsive storefront", "Organized product categories", "Secure admin management", "Product and order management"],
     outcome: "Live", isPlaceholder: false, projectTitle: "Beauty Spell – Beauty & Skincare E-commerce Website",
     developedBy: "Appnix IT", projectType: "E-commerce Website Development", status: "Live",
