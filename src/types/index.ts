@@ -68,6 +68,12 @@ export interface CaseStudy {
   outcome: string;
   /** true while text is editable placeholder copy */
   isPlaceholder: boolean;
+  projectTitle?: string;
+  developedBy?: string;
+  projectType?: string;
+  status?: string;
+  screenshot?: string;
+  liveUrl?: string;
 }
 
 export type ContentBlock =

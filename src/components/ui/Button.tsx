@@ -16,6 +16,8 @@ interface ButtonProps {
   /** Analytics event label, sent as `cta_click` */
   track?: string;
   className?: string;
+  target?: React.HTMLAttributeAnchorTarget;
+  rel?: string;
   type?: "button" | "submit";
   disabled?: boolean;
   loading?: boolean;
@@ -32,7 +34,7 @@ const variants: Record<Variant, string> = {
   text: "px-0 py-0 min-h-0 text-orange hover:text-gold",
 };
 
-export function Button({ children, href, variant = "primary", size = "md", arrow = true, track, className, type = "button", disabled, loading, onClick }: ButtonProps) {
+export function Button({ children, href, variant = "primary", size = "md", arrow = true, track, className, target, rel, type = "button", disabled, loading, onClick }: ButtonProps) {
   const cls = cn(base, variant === "text" ? "" : sizes[size], variants[variant], className);
   const handle = () => {
     if (track) trackEvent("cta_click", { label: track });
@@ -44,6 +46,6 @@ export function Button({ children, href, variant = "primary", size = "md", arrow
       {arrow && !loading && <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />}
     </>
   );
-  if (href) return <Link href={href} className={cls} onClick={handle}>{content}</Link>;
+  if (href) return <Link href={href} target={target} rel={rel} className={cls} onClick={handle}>{content}</Link>;
   return <button type={type} className={cls} disabled={disabled || loading} onClick={handle} aria-busy={loading || undefined}>{content}</button>;
 }

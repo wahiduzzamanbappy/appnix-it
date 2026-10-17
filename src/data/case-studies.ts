@@ -27,6 +27,13 @@ export const caseStudies: CaseStudy[] = [
     challenge: "Businesses want to sell online without losing control of catalogue, orders and back-office processes.",
     solution: "Scalable digital commerce solutions covering storefront, checkout and operational integration.",
     capabilities: ["Storefront", "Catalogue management", "Payment integration", "Order management"], outcome: pendingOutcome, isPlaceholder: true },
+  { slug: "beauty-spell", productSlug: "ecommerce", title: "Beauty Spell", category: "E-commerce",
+    challenge: "Beauty and skincare shoppers need an elegant, responsive way to explore products and place orders.",
+    solution: "Beauty Spell is a modern and responsive beauty and skincare e-commerce website developed by Appnix IT, featuring an elegant shopping experience, organized product categories, secure admin management, and streamlined product and order management.",
+    capabilities: ["Responsive storefront", "Organized product categories", "Secure admin management", "Product and order management"],
+    outcome: "Live", isPlaceholder: false, projectTitle: "Beauty Spell – Beauty & Skincare E-commerce Website",
+    developedBy: "Appnix IT", projectType: "E-commerce Website Development", status: "Live",
+    screenshot: "/beauty-spell.png", liveUrl: "https://beauty-spell-ecommerce.vercel.app/" },
 ];
 
 export const getCaseStudy = (slug: string) => caseStudies.find((c) => c.slug === slug);
